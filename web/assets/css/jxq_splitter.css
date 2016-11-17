@@ -1,0 +1,18 @@
+/*.jqx-splitter > div:first-child, .jqx-splitter-panel + .jqx-splitter-splitbar-vertical {*/
+    /*float: left;*/
+/*}*/
+
+/*.jqx-splitter .jqx-splitter-panel {*/
+    /*position: relative;*/
+/*}*/
+
+/*.jqx-splitter-splitbar-vertical + .jqx-splitter-panel {*/
+    /*left: 6px !important;*/
+/*}*/
+/*.jqx-splitter-collapse-button-vertical {*/
+    /*width: 6px !important;*/
+/*}*/
+
+/*.jqx-splitter-splitbar-collapsed + .jqx-splitter-panel {*/
+    /*position: absolute;*/
+/*}*/

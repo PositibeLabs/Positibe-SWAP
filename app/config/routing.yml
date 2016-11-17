@@ -1,0 +1,39 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+app_test_index:
+    path: /api/test
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:indexAction}
+
+app_test_create:
+    path: /api/test
+    methods: ["POST"]
+    defaults: { _controller: app.controller.test:createAction, _format: 'json'}
+
+app_test_show:
+    path: /api/test/{id}
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:showAction, _format: 'json'}
+
+app_test_spider_scan_status:
+    path: /api/test/{id}/spider_scan_status
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:getSpiderScanStatusAction, _format: 'json'}
+
+app_test_run_ascan:
+    path: /api/test/{id}/run_ascan
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:runAscanAction, _format: 'json'}
+
+app_test_ascan_status:
+    path: /api/test/{id}/ascan_status
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:getAscanStatusAction, _format: 'json'}
+
+app_test_reload_datas:
+    path: /api/test/{id}/reload_datas
+    methods: ["GET"]
+    defaults: { _controller: app.controller.test:reloadDatasAction, _format: 'json'}
+

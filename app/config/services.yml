@@ -1,0 +1,19 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+    owasp_zap_key: "45fi5ccjibmapljdbi3ahf2p60"
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    zap_service:
+        class: AppBundle\Zap\ZapService
+        arguments: [@app.manager.test, %owasp_zap_key%]
+
+    app.test.event_subcriber:
+        class: AppBundle\EventListener\TestListener
+        arguments: [@zap_service, @security.token_storage]
+        tags:
+            - { name: kernel.event_subscriber }

@@ -1,0 +1,50 @@
+@import "mixin.less";
+@import "variables.less";
+
+.whatsapp-panel {
+  .whatsapp-action a {
+    text-decoration: none;
+  }
+}
+
+#whatsapp_panel_send_message_group_to .chosen-container.chosen-container-single {
+  width: 100% !important;
+}
+
+.whatsapp-item {
+  line-height: 17px;
+  height: 66px;
+  opacity: 1;
+}
+
+.whatsapp-item.ng-hide-add.ng-hide-add-active,
+.whatsapp-item.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear  0.3s;
+  > div {
+    position: absolute;
+  }
+}
+
+.whatsapp-item.ng-hide {
+  height: 0;
+  opacity: 0;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.whatsapp-box {
+  opacity: 1;
+  height: 145px;
+}
+
+.whatsapp-box.ng-hide-add.ng-hide-add-active,
+.whatsapp-box.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.3s;
+  transition: all linear  0.3s;
+}
+
+.whatsapp-box.ng-hide {
+  height: 0;
+  opacity: 0;
+}

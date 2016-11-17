@@ -1,0 +1,102 @@
+@import "variables.less";
+
+#admin_container {
+  background: @color-blacklight;
+  margin-left: 0;
+  margin-right: 0;
+  min-height: 500px;
+  margin-top: -5px;
+  .sidebar {
+    background: @color-blacklight;
+    padding-right: 0;
+    padding-left: 0;
+    color: @color-graydark;
+    .navbar-header {
+      button {
+        border: 1px solid desaturate(darken(@color-graydark, 30%), 70%);
+        margin-bottom: 3px;
+        margin-top: 3px;
+        padding: 2px 10px;
+      }
+      button:hover {
+        background: desaturate(darken(@color-graydark, 30px), 70%);
+      }
+    }
+    .navbar-collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .navbar-body > .nav > li {
+      a {
+        text-decoration: none;
+        color: @color-graydark;
+      }
+      a:hover, a:focus {
+        background-color: darken(@color-blacklight, 10%);
+      }
+      > a {
+        border-top: solid 1px lighten(@color-blacklight, 10%);
+        line-height: 36px;
+      }
+      .nav {
+        :first-child a {
+          border-top: solid 1px lighten(@color-blacklight, 10%);
+        }
+        > li > {
+          a {
+            padding-left: 40px;
+          }
+          a:hover, a:focus {
+            background-color: lighten(@color-blacklight, 10%);
+          }
+        }
+      }
+    }
+  }
+  .admin-home {
+    .admin-function {
+      font-size: 110px;
+      min-width: 150px;
+    }
+  }
+  .admin-content {
+    background: @color-grayback;
+    padding-bottom: 40px;
+    .button-actions {
+      margin-bottom: 10px;
+    }
+  }
+  .breadcrumb {
+    background: @color-gray;
+  }
+}
+
+.admin-block {
+  background: @color-white;
+  border: solid 1px @color-graydark;
+  .admin-title-block {
+    margin-top: 10px;
+    border-bottom: solid 2px @color-graydark;
+    padding-left: 10px;
+    .title {
+      font-weight: bolder;
+    }
+  }
+  .admin-content-block {
+    padding: 10px;
+
+    table > tbody > tr:first-child, table > tr:first-child {
+      background: @color-gray;
+    }
+  }
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span,
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+  border-radius: 0;
+}
+
+.footer {
+  background: @color-blacklight;
+  margin-top: 0;
+}

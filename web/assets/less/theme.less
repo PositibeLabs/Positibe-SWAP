@@ -1,0 +1,253 @@
+/************ Custom for Bootstrap *********/
+@import "variables.less";
+@import "mixin";
+//@import "chat_theme.less";
+//@import "whatsapp_theme.less";
+@import "admin_theme.less";
+
+body {
+  background-color: @color-gray;
+}
+
+footer {
+  padding: 25px;
+  margin-top: 10px;
+  background: desaturate(darken(@color-bluedark_light, 30%), 40%);
+  text-align: center;
+  color: @color-graydark;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.breadcrumb {
+  border-radius: 0;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.navbar {
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  margin-bottom: 0;
+  a.navbar-brand, .navbar-nav > li > a {
+    color: @color-white;
+    height: 45px;
+    line-height: 25px;
+  }
+}
+
+.navbar-default {
+  background: @color-grayback;
+  a.navbar-brand:hover, .navbar-nav > li > a:hover {
+    color: @color-white;
+    background: @color-blue + #010;
+  }
+}
+
+.rapid-attack.navbar-default {
+  height: 40px;
+  min-height: initial;
+  line-height: 20px;
+  padding: 3px;
+}
+
+.btn-default {
+  background: @color-gray;
+  border-color: @color-graydark;
+  text-shadow: 0 1px 0 @color-white;
+}
+
+.panel-heading {
+  h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    color: @color-blacklight;
+  }
+}
+
+.nav.nav-tabs {
+  border-color: #c5c5c5;
+  background: #e8e8e8;
+  padding-top: 5px;
+  & > li.active > a, & > li.active > a:focus, & > li.active > a:hover {
+    border-color: #c5c5c5;
+    border-bottom-color: transparent;
+  }
+}
+
+/***************Menu Component *******************/
+.menu-tree {
+  .btn {
+    min-width: 150px;
+    background-color: transparent;
+    text-align: left;
+  }
+  .menu-root {
+    padding-left: 5px;
+    .accordion-toggle {
+      width: 5%;
+      & > i {
+        min-width: 5px;
+        &.fa-caret-right {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .menu-children {
+    padding-left: 20px;
+  }
+}
+
+/************ Custom for jxqSplitter **************/
+//.jqx-widget-content {
+//  background-color: @color-gray;
+//}
+//
+//.jqx-splitter-splitbar-vertical {
+//  border: none;
+//}
+//
+//.jqx-splitter-splitbar-hover {
+//  background-color: @color-graydark;
+//}
+//
+//.jqx-widget-content {
+//  font-family: inherit;
+//  font-size: inherit;
+//  font-style: inherit;
+//}
+//
+//.jqx-widget {
+//  color: inherit;
+//  direction: inherit;
+//  font-family: inherit;
+//  font-size: inherit;
+//  font-style: inherit;
+//}
+//
+//.jqx-splitter-splitbar-vertical .jqx-splitter-collapse-button-vertical {
+//  border-radius: 5px !important;
+//  font-size: 8px;
+//  color: #fff;
+//  line-height: 5.5;
+//  margin-top: 0 !important;
+//  margin-left: -2px !important;
+//  text-align: center;
+//  width: 9px !important;
+//  z-index: 100;
+//}
+//
+//.jqx-fill-state-pressed {
+//  background: @color-graydark;
+//}
+//
+//.jqx-splitter-splitbar-collapsed .jqx-fill-state-pressed {
+//  background: @color-bluedark_light;
+//}
+//
+/********* Splitter content custom styles **********/
+.main-page {
+  min-height: 500px;
+  border: 0;
+  .split {
+    .split_left, .split_right {
+      background-color: @color-white;
+      border: solid 1px @color-graydark;
+      width: 100%;
+    }
+    .split_left {
+      border-right: solid 6px #aaa;
+      margin-left: 5px;
+      .panel-heading {
+        background: @color-grayback;
+        border-bottom: solid 1px @color-graydark;
+      }
+      .panel-body {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+///********** New component Panel Collapsible **********/
+//.panel-collapsible {
+//  border: 0;
+//  border-radius: 0;
+//  margin-bottom: 0;
+//  border-bottom: solid 1px @color-graydark;
+//  .panel-heading {
+//    background-color: @color-grayback;
+//    .border-selected(@color-grayback);
+//    border-top-left-radius: 0;
+//    border-top-right-radius: 0;
+//    border-bottom: 0;
+//    .panel-title {
+//      font-size: inherit;
+//      a {
+//        color: @color-blacklight;
+//        text-decoration: none;
+//      }
+//      .panel-heading-options {
+//        text-decoration: none;
+//      }
+//    }
+//  }
+//  .panel-collapsible-selected {
+//    .border-selected(@color-blue);
+//  }
+//  .panel-collapse {
+//    .panel-body {
+//      padding: 0;
+//      .panel-item {
+//        padding: 10px;
+//        margin: auto;
+//        border-top: solid 1px #dfdfdf;
+//      }
+//    }
+//  }
+//  .alert {
+//    margin-bottom: 0;
+//  }
+//}
+
+/************************ Chosen *******************/
+.chosen-container .chosen-single {
+  background: @color-white;
+  border: 1px solid @color-graydark;
+  border-radius: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  div > b {
+    margin-top: 5px;
+  }
+}
+
+.has-error {
+  .chosen-container .chosen-single {
+    border: 1px solid #a94442;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  }
+}
+
+/*** Clase para acceder via HTML a la funcionalidad fixed de CSS ****/
+.fixed {
+  position: fixed;
+}

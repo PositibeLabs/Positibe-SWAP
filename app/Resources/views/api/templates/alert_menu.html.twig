@@ -1,0 +1,59 @@
+<div id="panel_bottom_alerts">
+    <ul class="nav nav-tabs">
+        <li style="margin-left: 10px;" class="active"><a href="#menu_bottom_alerts"
+                                                         data-toggle="tab">{{ 'alerts' | trans }}</a>
+        </li>
+        <li><a href="#menu_bottom_scan" data-toggle="tab">{{ 'scans' | trans }}</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="menu_bottom_alerts" class="tab-pane active">
+            <div class="menu-tree">
+                <div class="menu-root">
+                    <a class="accordion-toggle" data-toggle="collapse"
+                       data-parent="#menu_bottom_scan"
+                       href="#menu_bottom_scan_alerts">
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <button type="button" class="btn btn-sm" data-toggle="button"><i
+                                class="glyphicon glyphicon-folder-open"></i> Alerta
+                    </button>
+                </div>
+
+                <div id="menu_bottom_scan_alerts"
+                     class="panel-collapse collapse in menu-children">
+                    <div class="menu-tree" id="menu_bottom_scan_alerts_items"
+                         ng-repeat="filteredAlert in test.filteredAlerts">
+
+                        <div class="menu-root">
+                            <a class="accordion-toggle" data-toggle="collapse"
+                               data-parent="#menu_bottom_scan_alerts_items"
+                               href="#menu_bottom_scan_alerts_list_{{ '{{ $index }}' }}">
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <button type="button" class="btn btn-sm" data-toggle="button">
+                                <i class="glyphicon glyphicon-folder-open"></i>
+                        <span class="alert-name text-warning">
+                        <i class="fa fa-flag"></i> {{ '{{ filteredAlert.name }}' }}
+                        </span>
+                            </button>
+                        </div>
+
+                        <div id="menu_bottom_scan_alerts_list_{{ '{{ $index }}'}}"
+                             class="panel-collapse collapse in menu-children" >
+                            <div class="menu-item" ng-repeat="alert in filteredAlert.alerts | orderBy:url">
+                                <button type="button" class="btn btn-sm"
+                                        data-toggle="button">
+                                    <i class="glyphicon glyphicon-file"></i> {{ '{{ alert.url }}' }}
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="menu_bottom_scan" class="tab-pane">
+        </div>
+    </div>
+</div>

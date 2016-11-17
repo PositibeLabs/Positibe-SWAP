@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {#<div id="splitContainer">#}
+        {#<div>#}
+            {#<div class="jqx-hideborder jqx-hidescrollbars" id="tabs1">#}
+                {#<ul>#}
+                    {#<li style="margin-left: 30px;">Alertas</li>#}
+                    {#<li>Tab 2</li>#}
+                {#</ul>#}
+                {#<div>#}
+                    {#<table class="table table-bordered">#}
+                        {#<tr>#}
+                            {#<th>Id</th>#}
+                            {#<th>Alerta</th>#}
+                            {#<th>Descripción</th>#}
+                            {#<th>Url</th>#}
+                        {#</tr>#}
+                        {#<tr ng-repeat="alert in test.alerts | orderBy:'-id'">#}
+                            {#<td>{{ '{{ alert.id}}' }}</td>#}
+                            {#<td>{{ '{{ alert.alert }}' }}</td>#}
+                            {#<td>{{ '{{ alert.description }}' }}</td>#}
+                            {#<td>{{ '{{ alert.url }}' }}</td>#}
+                        {#</tr>#}
+                    {#</table>#}
+                {#</div>#}
+                {#<div>#}
+                    {#Content 2#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div>#}
+            {#<div id="splitter">#}
+                {#<div>#}
+                    {#<div class="jqx-hideborder jqx-hidescrollbars" id="tabs2">#}
+                        {#<ul>#}
+                            {#<li style="margin-left: 30px;">Tab 1</li>#}
+                            {#<li>Tab 2</li>#}
+                        {#</ul>#}
+                        {#<div>#}
+                            {#Content 1#}
+                        {#</div>#}
+                        {#<div>#}
+                            {#Content 2#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div>#}
+                    {#<div class="jqx-hideborder jqx-hidescrollbars" id="tabs3">#}
+                        {#<ul>#}
+                            {#<li style="margin-left: 30px;">Tab 1</li>#}
+                            {#<li>Tab 2</li>#}
+                        {#</ul>#}
+                        {#<div>#}
+                            {#Content 1#}
+                        {#</div>#}
+                        {#<div>#}
+                            {#Content 2#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+    {#<div id='splitter' class="splitter">#}
+        {#<div class="split">#}
+            {#<div class="split_left">#}
+
+            {#</div>#}
+        {#</div>#}
+        {#<div class="split" style="min-height: 500px">#}
+            {#<div class="split split_right" style="display: none">#}
+
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+{% endblock %}
